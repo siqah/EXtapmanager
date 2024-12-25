@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tab Manager</h1>
+      <label for="darkMode">Dark Mode:</label>
+      <input type="checkbox" id="darkMode" />
+
+      <button id="suspendTabs">Suspend Inactive Tabs</button>
+      <button id="resumeTabs">Resume Suspended Tabs</button>
+
+      <h2>Suspended Tabs:</h2>
+      <div>
+        <p id="stats">Suspended Tabs: 0</p>
+        <div id="memoryInfo">Loading memory info...</div>
+
+      </div>
+
+      <ul id="tabList"></ul>
+
+      <label for="whitelist">Whitelist Domains (comma-separated):</label>
+      <input type="text" id="whitelist" placeholder="e.g., google.com, youtube.com" />
+      <button id="saveWhitelist">Save</button>
+
+      <h2>Settings</h2>
+      <label for="timeout">Inactivity Timeout (minutes):</label>
+      <input type="number" id="timeout" value="5" min="1" />
+      <button id="saveTimeout">Save Timeout</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
